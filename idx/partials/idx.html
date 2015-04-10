@@ -1,0 +1,230 @@
+<div id="index_html">
+  <div class="row-fluid" id="sub_navbar" ng-include="'/idx/partials/customer_types.html'">
+  </div>
+  <section id="intro" ng-style="introHeight">
+    <div class="row">
+      <div class="intro_header">
+        <h2 class="">Learn Better. Together.</h2>
+      </div>
+    </div>
+    <script>
+    var intro = document.getElementById('intro');
+    if(body) {
+      var more = document.createElement('div');
+      more.setAttribute('id', 'more');
+      more.setAttribute('class', 'fadeInUp delay animated hidden-phone');
+      more.innerHTML = '<a scrollto href="#features-top" class="btn btn-primary"><i class="icon-sort-down icon-3x"></i></a>';
+      intro.appendChild(more);
+    }
+    </script>
+  </section>
+  <div class="customer_selection_bar">
+    <div class="container text-center">
+      <a href="/student" ng-class="{active: customerType == 'student'}">
+        Students
+      </a>
+      <a href="/educator" ng-class="{active: customerType == 'educator'}">
+        Teachers and Institutions
+      </a>
+      <a href="/business" ng-class="{active: customerType == 'business'}">
+        Corporate Training
+      </a>
+    </div>
+  </div>
+  <!--start features header-->
+  <section id="features-top">
+    <!--start features-desktop header-->
+    <section id="features-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20" style="overflow:hidden;">
+      <h1 class="header">Features</h1>
+    </section>
+    <!--start features-mobile header-->
+    <section id="features-top-mobile" class="section-header hidden-desktop">
+      <h1 class="header">Features</h1>
+    </section>
+  </section>
+  <!--start features-->
+  <section ng-if="customerType == 'student'" ng-include="'/idx/partials/student_features_content.html'" ng-animate="'fade'">
+  </section>
+  <section ng-if="customerType == 'educator'" ng-include="'/idx/partials/educator_features_content.html'" ng-animate="'fade'">
+  </section>
+  <section ng-if="customerType == 'business'" ng-include="'/idx/partials/business_features_content.html'" ng-animate="'fade'">
+  </section>
+  <div class="customer_selection_bar">
+    <div class="container text-center">
+      <a href="/student" scrollto="#features-top" ng-class="{active: customerType == 'student'}">
+        Students
+      </a>
+      <a href="/educator" scrollto="#features-top" ng-class="{active: customerType == 'educator'}">
+        Teachers and Institutions
+      </a>
+      <a href="/business" scrollto="#features-top" ng-class="{active: customerType == 'business'}">
+        Corporate Training
+      </a>
+    </div>
+  </div>
+  <!--start courses header-->
+  <section id="courses-top">
+    <!--start courses-desktop header-->
+    <section id="courses-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+      <h1 class="header">Courses</h1>
+      <p class="header">The courses that our partners currently have available!</p>
+    </section>
+    <!--start courses-mobile header-->
+    <section id="courses-top-mobile" class="section-header hidden-desktop">
+      <h1 class="header">Courses</h1>
+      <p class="header">The courses that our partners currently have available!</p>
+    </section>
+  </section>
+  <!--start courses-->
+  <section id="courses">
+    <div class="container">
+      <div class="row divide">
+        <div class="span9">
+          <h3 class="headline_statement">
+            Study for whatever you want to be - Real Estate Salesperson to Project Management Professional (PMP) - With your future industy peers.
+          </h3>
+        </div>
+        <div class="span3 headline_action">
+          <a href="#" unclick class="btn btn-info btn-lg" onclick="$('#signup_modal').modal()">
+            <span class="text">Learn more</span>
+          </a>
+        </div>
+      </div>
+      <div class="row divide">
+        <div class="span12">
+          <ul class="thumbnails">
+            <li class="span6">
+              <div class="thumbnail">
+                <h4>
+                  <span>Real Estate</span>
+                </h4>
+                <div>
+                  <a href="/courses/ca">California Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/fl">Florida Real Estate Sales Associate Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/ga">Georgia Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/il">Illinois Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/ma">Massachusetts Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/mi">Michigan Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/nj">New Jersey Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/ny">New York Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/nc">North Carolina Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/oh">Ohio Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/pa">Pennsylvania Real Estate Salesperson Exam</a>
+                </div>
+                <div>
+                  <a href="/courses/va">Virginia Real Estate Salesperson Exam</a>
+                </div>
+                <p>
+                  <a href="/catalog">View all Courses</a>
+                </p>
+              </div>
+            </li>
+            <li class="span6">
+              <div class="thumbnail">
+                <h4>
+                  <span>Business and Management</span>
+                </h4>
+                <div>
+                  <a href="/courses/pmp">Project Management Professional (PMP) Exam</a>
+                </div>
+                <p>
+                  <a href="/catalog">View all Courses</a>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div style="max-width: 940px; margin: auto; margin-top: 10px;">
+            <button class="btn btn-secondary btn-lg btn-block" ng-click="$state.go('catalog')">
+              <span>Full Catalog of Courses</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--start contact header-->
+  <section id="contact-top">
+    <!--start contact-desktop header-->
+    <section id="contact-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+      <h1 class="header">Contact Us</h1>
+      <p class="header">How can we help?</p>
+    </section>
+    <!--start contact-mobile header-->
+    <section id="contact-top-mobile" class="section-header hidden-desktop">
+      <h1 class="header">Contact Us</h1>
+      <p class="header">How can we help?</p>
+    </section>
+  </section>
+  <!--start contact-->
+  <section id="contact">
+    <div class="container">
+      <div class="row divide">
+        <div class="span8">
+          <div class="row">
+            <form ng-submit="submitContactForm()">
+              <div class="span4">
+                <label>Name:</label>
+                <input type="text" ng-model="contactForm.name" placeholder="Name" id="name" class="span4"/>
+              </div>
+              <div class="span4">
+                <label>Email:</label>
+                <input type="text" ng-model="contactForm.email" placeholder="Email" id="email"  class="span4"/>
+              </div>
+
+              <div class="span8">
+                <label>Message:</label>
+                <textarea rows="6" ng-model="contactForm.message" placeholder="Message" class="span8"></textarea>
+              </div>
+              <div class="span8">
+                <div class="message">
+                  <div class="alert"></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--start sidebar-->
+        <div class="span4" id="address">
+          <br/>
+          <p>
+            1459 18th St
+            <br>
+            PMB 213
+            <br/>
+            San Francisco, CA 94107
+          </p>
+          <p>
+            general: info@yoursigma.com
+            <br/>
+            support: support@yoursigma.com
+          </p>
+          <p> <abbr title="Phone">P:</abbr>
+            (646) 545-9593
+            <br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

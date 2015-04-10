@@ -1,0 +1,75 @@
+html {
+	overflow: auto;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+	padding: 0;
+	color: #25272B;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+/* ==== Typography ==== */
+
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0; /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding: 0; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+	font-weight: 300;
+	clear: both;
+}
+
+h1 {
+	font-size: 56px;
+	text-align: center;
+	margin-bottom: 35px;
+	line-height: 1;
+	letter-spacing: -3px;
+}
+
+h4 {
+  font-size: 34px;
+  font-weight: 300;
+  color: #333;
+  line-height: 38px;
+  margin: 10px 0;
+}
+
+h4 > a {
+  color: #1A376B;
+
+}
+h4 > a:hover {
+  color: #0D2042;
+
+}
+
+
+/* ==== Intro ==== */
+
+#intro {
+	height: 100%;
+	background: url('/img/harkness_bg.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+#intro h2 {
+	font-size: 56px;
+	text-align: left;
+	font-weight: 700;
+	padding: 15px 0;
+	padding-right: 20px;
+	line-height: 1;
+	color: white;
+}
+
+.intro_header {
+	background: #0BF;
+	background: rgba(0, 187, 255, .7);
+	padding-left: 12%;
+	margin-top: 180px;
+	float: left;
+	max-width: 70%;
+}

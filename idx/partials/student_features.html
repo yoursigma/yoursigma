@@ -1,0 +1,118 @@
+<div id="student_features_html">
+  <section id="intro" class="student_features_intro" ng-style="introHeight">
+    <div class="row">
+      <div class="intro_header">
+        <h2 class="">You've never learned so fast</h2>
+      </div>
+    </div>
+    <script>
+    var intro = document.getElementById('intro');
+    if(body) {
+      var more = document.createElement('div');
+      more.setAttribute('id', 'more');
+      more.setAttribute('class', 'fadeInUp delay animated hidden-phone');
+      more.innerHTML = '<a scrollto href="#features-top" class="btn btn-primary lg"><i class="icon-sort-down icon-3x"></i></a>';
+      intro.appendChild(more);
+    }
+    </script>
+  </section>
+  <!--start features header-->
+  <section id="features-top">
+    <!--start features-desktop header-->
+    <section id="features-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20" style="overflow:hidden;">
+      <h1 class="header">Practice</h1>
+    </section>
+    <!--start features-mobile header-->
+    <section id="features-top-mobile" class="section-header hidden-desktop">
+      <h1 class="header">Practice</h1>
+    </section>
+  </section>
+  <!--start features-->
+  <section ng-include="'/idx/partials/student_features_content.html'">
+  </section>
+  <!--start other features header-->
+  <section id="other-features-top">
+    <!--start contact-desktop header-->
+    <section id="other-features-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+      <p class="header">And much, much more!</p>
+    </section>
+    <!--start contact-mobile header-->
+    <section id="other-features-top-mobile" class="section-header hidden-desktop">
+      <p class="header">And much, much more!</p>
+    </section>
+  </section>
+  <!--start feedback header-->
+  <section id="feedback-top">
+    <!--start contact-desktop header-->
+    <section id="feedback-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+      <p class="header">Testimonials</p>
+    </section>
+    <!--start contact-mobile header-->
+    <section id="feedback-top-mobile" class="section-header hidden-desktop">
+      <p class="header">Testimonials?</p>
+    </section>
+  </section>
+  <!--start contact header-->
+  <section id="contact-top">
+    <!--start contact-desktop header-->
+    <section id="contact-top-desktop" class="section-header visible-desktop" data-stellar-background-ratio="0.6" data-stellar-vertical-offset="20">
+      <p class="header">How can we help?</p>
+    </section>
+    <!--start contact-mobile header-->
+    <section id="contact-top-mobile" class="section-header hidden-desktop">
+      <p class="header">How can we help?</p>
+    </section>
+  </section>
+  <!--start contact-->
+  <section id="contact">
+    <div class="container">
+      <div class="row divide">
+        <div class="span8">
+          <div class="row">
+            <form ng-submit="submitContactForm()">
+              <div class="span4">
+                <label>Name:</label>
+                <input type="text" name="name" value="" id="name" class="span4"/>
+              </div>
+              <div class="span4">
+                <label>Email:</label>
+                <input type="text" name="email" value="" id="email"  class="span4"/>
+              </div>
+
+              <div class="span8">
+                <label>Message:</label>
+                <textarea rows="6" name="message" class="span8"></textarea>
+              </div>
+              <div class="span8">
+                <div class="message">
+                  <div class="alert"></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!--start sidebar-->
+        <div class="span4" id="address">
+          <br/>
+          <p>
+            1459 18th St
+            <br>
+            PMB 213
+            <br/>
+            San Francisco, CA 94107
+          </p>
+          <p>
+            general: info@yoursigma.com
+            <br/>
+            support: support@yoursigma.com
+          </p>
+          <p> <abbr title="Phone">P:</abbr>
+            (646) 545-9593
+            <br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
